@@ -1,0 +1,16 @@
+# {
+#   everything: @products,
+# }
+
+# json = []
+
+@products.map do |product|
+  product = {
+    name: product.name,
+    brewery: product.brewery,
+    description: product.description,
+    size: product.size,
+    abv: product.abv,
+
+  }
+end
