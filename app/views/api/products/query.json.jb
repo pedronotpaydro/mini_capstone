@@ -1,7 +1,0 @@
-{
-  product_name: @output_value.name,
-  product_brewery: @output_value.brewery,
-  product_abv: @output_value.abv,
-  product_notes: @output_value.description,
-
-}

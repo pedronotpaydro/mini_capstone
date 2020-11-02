@@ -1,16 +1,12 @@
-# {
-#   everything: @products,
-# }
-
-# json = []
-
 @products.map do |product|
   product = {
+    id: product.id,
     name: product.name,
     brewery: product.brewery,
     description: product.description,
     size: product.size,
     abv: product.abv,
-
+    price: product.price,
+    image_url: product.image_url,
   }
 end

@@ -1,0 +1,10 @@
+{
+  id: @products.id,
+  name: @products.name,
+  brewery: @products.brewery,
+  abv: @products.abv,
+  description: @products.description,
+  image_url: @products.image_url,
+  price: @products.price,
+
+}
