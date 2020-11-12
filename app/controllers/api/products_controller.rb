@@ -1,4 +1,6 @@
 class Api::ProductsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     @products = Product.all
 
@@ -21,6 +23,7 @@ class Api::ProductsController < ApplicationController
       size: params["size"],
       abv: params["abv"],
       price: params["price"],
+      supplier_id: params[:supplier_id],
 
     })
     if @product.save
