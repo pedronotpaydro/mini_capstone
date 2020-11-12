@@ -2,11 +2,13 @@ class Api::ProductsController < ApplicationController
   before_action :authenticate_admin, except: [:index, :show]
 
   def index
-    @products = Product.all
-
-    p current_user
-
-    render "index.json.jb"
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @products = category.products
+    else
+      @products = Product.all
+      render "index.json.jb"
+    end
   end
 
   def show

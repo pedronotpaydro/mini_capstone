@@ -2,6 +2,8 @@ class Product < ApplicationRecord
   belongs_to :supplier
   has_many :orders
   has_many :images
+  has_many :category_products
+  has_many :categories, through: :category_products
 
   validates :name, presence: true, uniqueness: true
   validates :price, presence: true, numericality: { greater_than: 0 }
@@ -18,6 +20,12 @@ class Product < ApplicationRecord
   def total
     price + tax
   end
+
+  # def categories
+  #   category_products.map do |category_product|
+  #     category_product.category_id
+  #   end
+  # end
 
   # def image
   #   Image.where(product_id: id)

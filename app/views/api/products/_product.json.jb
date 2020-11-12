@@ -10,5 +10,6 @@
   total: product.total,
   supplier: product.supplier,
   image: product.images,
+  categories: product.categories,
 
 }
