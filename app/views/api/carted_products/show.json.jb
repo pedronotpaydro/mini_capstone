@@ -1,0 +1,4 @@
+# render partial: "carted_products.json.jb", locals: { product: @carted_products }
+{
+  message: "you did it",
+}
