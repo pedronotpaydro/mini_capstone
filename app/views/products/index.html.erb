@@ -1,0 +1,10 @@
+<% @products.each do |product|%>
+<h1><%= product.name%></h1>
+<h2><%= product.brewery%></h2>
+<h3><%= product.description%></h3>
+<a href="/products/<%= product.id%>">More info</a>
+<% if product.images.length > 0 %>
+  <img src="<%= product.images[0].url %>" width=300>
+<% end %>
+<% end %>
+<>

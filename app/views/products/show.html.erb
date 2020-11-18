@@ -1,0 +1,7 @@
+<h1><%= @product.name%></h1>
+<h2><%= @product.brewery%></h2>
+<h3><%= @product.description%></h3>
+<% if @product.images.length > 0 %>
+  <img src="<%= @product.images[0].url %>" width=300>
+<% end %>
+<a href="/products">HOME</a>
